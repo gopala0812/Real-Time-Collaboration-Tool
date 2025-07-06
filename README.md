@@ -67,3 +67,11 @@ This makes the tool extremely lightweight and fast for quick access.
 EasyNote combines simplicity with robust features to deliver a smooth and modern real-time collaboration tool. Whether you're jotting down ideas with friends, planning a group assignment, or working remotely with your team, EasyNote keeps everyone on the same page—literally.
 
 With features like rich text editing, real-time sync, user tracking, notifications, PDF export, and dark mode support, it stands out as a minimalist yet capable collaborative platform.
+
+
+![Image](https://github.com/user-attachments/assets/269b88a3-3408-436f-8f87-286b46f90679)
+![Image](https://github.com/user-attachments/assets/f945239a-8528-4ca6-8b06-b9409ac46014)
+![Image](https://github.com/user-attachments/assets/29925c62-dddb-4309-b483-bb871670e846)
+![Image](https://github.com/user-attachments/assets/d271130a-f690-4267-9181-d104c13936ac)
+![Image](https://github.com/user-attachments/assets/b5762b4e-6e10-4948-ad6c-ce5b7e605d53)
+![Image](https://github.com/user-attachments/assets/09efc948-788d-48f4-a94b-e63c59b5244d)
