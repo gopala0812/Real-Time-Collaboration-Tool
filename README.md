@@ -82,6 +82,7 @@ EasyNote achieves the goal of providing a lightweight, real-time note collaborat
 
 Whether used for a brainstorming session, remote study group, or even pair programming notes — EasyNote ensures clarity, speed, and ease of use.
 
+# Output
 
 ![Image](https://github.com/user-attachments/assets/269b88a3-3408-436f-8f87-286b46f90679)
 ![Image](https://github.com/user-attachments/assets/f945239a-8528-4ca6-8b06-b9409ac46014)
