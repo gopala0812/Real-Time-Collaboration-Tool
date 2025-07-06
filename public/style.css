@@ -1,0 +1,223 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: url('background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER */
+.solid-header {
+  text-align: center;
+  padding: 30px 20px 10px;
+  background: none;
+  box-shadow: none;
+}
+
+.solid-header h1 {
+  font-size: 2.8rem;
+  color: #4a148c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.solid-header h1 span {
+  font-size: 1.3rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.solid-header h2 {
+  font-size: 1.15rem;
+  color: #444;
+  margin-top: 6px;
+}
+
+/* Main Container */
+.hero-container {
+  display: flex;
+  justify-content: space-between; /* 👈 Shift items to edges */
+  align-items: flex-start;
+  padding: 40px 80px;
+  gap: 60px;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+
+/* LEFT PANEL - Unchanged */
+.left-panel {
+  flex: 1.5;
+  max-width: 500px;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  line-height: 1.7;
+  font-size: 1rem;
+  color: #222;
+  align-self: flex-start;
+}
+
+.left-panel strong {
+  color: #4a148c;
+}
+
+.left-panel p {
+  margin-bottom: 14px;
+}
+
+/* RIGHT PANEL - Buttons Only, Moved Down Slightly */
+.right-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin-top: 120px;
+  margin-right: 190px;
+  min-width: 250px;      /* ✅ Prevent shrinking */
+}
+
+
+
+.right-panel button {
+  font-size: 1rem;
+  padding: 15px 40px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: #4B0082;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease;
+  width: 200px;          /* ✅ Fixed width */
+}
+
+
+.right-panel button:hover {
+  background-color: #6a1b9a;
+}
+
+/* FOOTER */
+footer {
+  margin-top: 40px;
+  padding: 16px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(6px);
+  color: #444;
+  font-size: 0.85rem;
+  font-style: italic;
+  border-top: 1px solid #ccc;
+  width: 100%;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .hero-container {
+    flex-direction: column;
+    padding: 30px 20px;
+    gap: 20px;
+  }
+
+  .left-panel,
+  .right-panel {
+    width: 100%;
+    max-width: none;
+  }
+
+  .right-panel {
+    margin-top: 30px;
+  }
+
+  .right-panel button {
+    width: 100%;
+  }
+
+  .solid-header h1 {
+    font-size: 2.2rem;
+    flex-direction: column;
+  }
+
+  .solid-header h2 {
+    font-size: 1rem;
+  }
+}
+
+/* Modern Form Styling inside left-panel */
+.left-panel form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.left-panel label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 6px;
+  display: inline-block;
+}
+
+.left-panel input[type="text"],
+.left-panel input[type="password"],
+.left-panel input[type="email"] {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.left-panel input:focus {
+  outline: none;
+  border-color: #4B0082;
+  box-shadow: 0 0 5px rgba(75, 0, 130, 0.3);
+}
+
+/* Button */
+.left-panel button {
+  padding: 14px 30px;
+  background: #4B0082;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.left-panel button:hover {
+  background: #6a1b9a;
+  transform: translateY(-2px);
+}
+/*instruction heading*/
+.highlight-subtitle {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 8px 18px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #333;
+  margin-top: 12px;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+

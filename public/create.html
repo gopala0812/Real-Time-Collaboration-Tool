@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create Note</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="create-page">
+  <header class="solid-header">
+    <h1>📝 EasyNote <span>- A Real-Time Collaborative Note-Taking Tool</span></h1>
+    <h2 class="highlight-subtitle">Enter your name to create a note</h2>
+    
+  </header>
+
+  <main class="hero-container">
+    <div class="left-panel">
+      <form onsubmit="event.preventDefault(); createNote();">
+        <div class="form-group">
+          <label for="name"><strong>Name:</strong></label>
+          <input type="text" id="name" placeholder="e.g., Gopala" required>
+        </div>
+        <br>
+        <button type="submit">🚀 Create Note</button>
+      </form>
+    </div>
+
+    <div class="right-panel">
+      <!-- Intentionally blank -->
+    </div>
+  </main>
+
+  <footer>© Gopala Krishna HK — 2025. All rights reserved.</footer>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+<script>
+  const socket = io();
+
+  function createNote() {
+    const name = document.getElementById("name").value.trim();
+    if (!name) return alert("Please enter your name");
+
+    socket.emit("create-note", name);
+
+    socket.on("note-created", ({ noteId, password }) => {
+      // Store in localStorage
+      localStorage.setItem("userName", name);
+      localStorage.setItem("noteId", noteId);
+      localStorage.setItem("notePassword", password);
+
+      // Show to user before redirecting
+      const result = `
+        ✅ Note Created Successfully!
+
+        👉 Note ID: ${noteId}
+        🔐 Password: ${password}
+
+        Share these with others to join this note.
+
+        Click OK to enter the note.
+      `;
+
+      if (confirm(result)) {
+        window.location.href = "note.html";
+      }
+    });
+  }
+  socket.once("note-created", ({ noteId, password }) => {
+  localStorage.setItem("userName", name);
+  localStorage.setItem("noteId", noteId);
+  localStorage.setItem("notePassword", password);
+  window.location.href = "note.html";
+});
+
+</script>
+
+</body>
+</html>
